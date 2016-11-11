@@ -58,5 +58,5 @@ resources:
       
   - name: nightly
     type: time
-    source:
+    seed:
       interval: 2 * * * *
