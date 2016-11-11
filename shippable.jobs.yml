@@ -21,6 +21,7 @@ jobs:
 #      - IN: dv-params
       - IN: env-test-ecs
       - TASK: managed
+        deployMethod: replace
 
 # / TEST deployment for VISUALIZER to Amazon ECS
 
