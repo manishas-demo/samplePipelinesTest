@@ -55,3 +55,8 @@ resources:
     pointer:
       sourceName : "demo-shippable-ecs-prod"
       region: "us-east-1"
+      
+  - name: nightly
+    type: time
+    source:
+      interval: 2 * * * *
