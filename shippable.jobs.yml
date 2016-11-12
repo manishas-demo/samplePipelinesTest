@@ -18,7 +18,7 @@ jobs:
     type: deploy
     steps:
       - IN: dv-man
-      - IN: nightly
+#      - IN: nightly
       - IN: env-test-ecs
       - TASK: managed
         deployMethod: replace
