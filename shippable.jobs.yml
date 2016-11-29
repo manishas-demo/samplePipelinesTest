@@ -18,30 +18,29 @@ jobs:
     type: deploy
     steps:
       - IN: dv-man
-#      - IN: nightly
       - IN: env-test-ecs
       - TASK: managed
         deployMethod: replace
 
 # / TEST deployment for VISUALIZER to Amazon ECS
 
-  - name: dv-rel
-    type: release
-    steps:
-      - IN: dv-ver
-        switch: off
-      - IN: dv-test-ecs
-        switch: off
-      - IN: dv-trigger
-        switch: off
-      - TASK: managed
-        bump: minor
+#  - name: dv-rel
+#    type: release
+#    steps:
+#      - IN: dv-ver
+#        switch: off
+#      - IN: dv-test-ecs
+#        switch: off
+#      - IN: dv-trigger
+#        switch: off
+#      - TASK: managed
+#        bump: minor
 
-  - name: dv-prod-ecs
-    type: deploy
-    steps:
-      - IN: dv-rel
-        switch: off
-      - IN: env-prod-ecs
-      - TASK: managed
-        deployMethod: replace
+#  - name: dv-prod-ecs
+#    type: deploy
+#    steps:
+#      - IN: dv-rel
+#        switch: off
+#      - IN: env-prod-ecs
+#      - TASK: managed
+#        deployMethod: replace
